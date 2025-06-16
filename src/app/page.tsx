@@ -13,21 +13,21 @@ export default function Home() {
         <S.PrimaryButton>LEARN MORE</S.PrimaryButton>
       </S.Section>
       <S.Section imageurl="./images/backgrounds/SecondPic.jpg">
-        <S.PrimaryText height="22">
+        <S.PrimaryText height="28">
           THE ROAD TO MAKING LIFE MULTIPLANETARY
         </S.PrimaryText>
         <S.PrimaryButton>LEARN MORE</S.PrimaryButton>
       </S.Section>
       <S.Section imageurl="./images/backgrounds/ThirdPic.jpg">
-        <S.SecondaryText height="19">RECENT LAUNCH</S.SecondaryText>
-        <S.PrimaryText height="16">
+        <S.SecondaryText height="34">RECENT LAUNCH</S.SecondaryText>
+        <S.PrimaryText height="28">
           STARSHIP&apos;S NINTH FLIGHT TEST
         </S.PrimaryText>
         <S.PrimaryButton>REWATCH</S.PrimaryButton>
       </S.Section>
       <S.Section imageurl="./images/backgrounds/FourthPic.jpg">
-        <S.SecondaryText height="15">RECENT LAUNCH</S.SecondaryText>
-        <S.PrimaryText height="11.5">STARLINK MISSION</S.PrimaryText>
+        <S.SecondaryText height="24">RECENT LAUNCH</S.SecondaryText>
+        <S.PrimaryText height="18">STARLINK MISSION</S.PrimaryText>
         <S.PrimaryButton>REWATCH</S.PrimaryButton>
       </S.Section>
       <S.Section>
@@ -37,12 +37,12 @@ export default function Home() {
           muted
           src={"./images/backgrounds/Fifth.mp4"}
         />
-        <S.SecondaryText height="15">RECENT LAUNCH</S.SecondaryText>
-        <S.PrimaryText height="11.5">STARLINK MISSION</S.PrimaryText>
+        <S.SecondaryText height="26">RECENT LAUNCH</S.SecondaryText>
+        <S.PrimaryText height="20">STARLINK MISSION</S.PrimaryText>
         <S.PrimaryButton>REWATCH</S.PrimaryButton>
       </S.Section>
       <S.Section imageurl="./images/backgrounds/Sixth.jpg">
-        <S.PrimaryText height="16.5">ADVANCING HUMAN SPACEFLIGHT</S.PrimaryText>
+        <S.PrimaryText height="28">ADVANCING HUMAN SPACEFLIGHT</S.PrimaryText>
         <S.PrimaryButton>LEARN MORE</S.PrimaryButton>
       </S.Section>
       <Footer />

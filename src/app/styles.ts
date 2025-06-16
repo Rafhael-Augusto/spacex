@@ -61,12 +61,12 @@ export const PrimaryButton = styled.button`
 export const PrimaryText = styled.span<Props>`
   position: absolute;
 
-  font-size: 5.4vh;
+  font-size: 8.5vw;
   height: 16%;
   width: 90%;
   line-height: 1;
 
-  bottom: ${(Props) => (Props.height ? Props.height : 10)}%;
+  bottom: ${(Props) => (Props.height ? Props.height : 18)}vw;
   left: 5%;
 `;
 
@@ -77,5 +77,5 @@ export const SecondaryText = styled(PrimaryText)<Props>`
   font-weight: lighter;
   font-family: "D-DIN-LIGHT", Arial, Helvetica, sans-serif;
 
-  bottom: ${(Props) => (Props.height ? Props.height : 13)}%;
+  bottom: ${(Props) => (Props.height ? Props.height : 24)}vw;
 `;
