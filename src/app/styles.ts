@@ -9,6 +9,8 @@ type Props = {
 
 export const Container = styled.div`
   position: relative;
+
+  overflow-x: hidden;
 `;
 
 export const Section = styled.section.withConfig({
@@ -24,7 +26,8 @@ export const Section = styled.section.withConfig({
   background-size: cover;
   background-position: center;
 
-  background-color: #000000;
+  background-color: rgba(0, 0, 0, 1);
+  transition: all 1s ease-in-out;
 `;
 
 export const VideoSection = styled.video`
@@ -35,27 +38,6 @@ export const VideoSection = styled.video`
 
   object-fit: cover;
   background-color: #000000;
-`;
-
-export const PrimaryButton = styled.button`
-  position: absolute;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background-color: transparent;
-  border: 2px solid #fff;
-  color: #fff;
-
-  font-weight: 700;
-  font-size: 2vh;
-
-  height: 8%;
-  width: 44%;
-
-  bottom: 11.5%;
-  left: 5%;
 `;
 
 export const PrimaryText = styled.span<Props>`

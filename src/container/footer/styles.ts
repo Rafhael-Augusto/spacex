@@ -2,6 +2,12 @@
 
 import styled, { css } from "styled-components";
 
+const sharedStyles = css`
+  font-size: 3vw;
+  font-family: "D-DIN-LIGHT", Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+`;
+
 export const Footer = styled.footer`
   text-align: center;
 
@@ -19,24 +25,21 @@ export const Footer = styled.footer`
   }
 `;
 
-const sharedStyles = css`
-  font-size: 80%;
-  font-family: "D-DIN", Arial, Helvetica, sans-serif;
-  font-weight: lighter;
-`;
-
 export const Copyright = styled.span`
   ${sharedStyles}
+  color: #979797;
 `;
 
 export const PrivacyPolicy = styled.a`
   ${sharedStyles}
   text-decoration: none;
+  font-weight: bolder;
 `;
 
 export const Suppliers = styled.button`
   ${sharedStyles}
 
+  font-weight: bolder;
   background-color: transparent;
   border: none;
 `;

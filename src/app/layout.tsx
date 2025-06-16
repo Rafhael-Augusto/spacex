@@ -4,6 +4,9 @@ import { Geist, Geist_Mono } from "next/font/google";
 import StyledComponentsRegistry from "@/lib/registry";
 import { GlobalStyles } from "@/styles/globalStyles";
 
+import Header from "@/container/header/header";
+import Footer from "@/container/footer/footer";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -29,7 +32,9 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <StyledComponentsRegistry>
           <GlobalStyles />
+          <Header />
           {children}
+          <Footer />
         </StyledComponentsRegistry>
       </body>
     </html>

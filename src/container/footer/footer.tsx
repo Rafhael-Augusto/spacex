@@ -1,6 +1,15 @@
+"use client";
+
+import { useRouter } from "next/navigation";
 import * as S from "./styles";
 
 export default function Footer() {
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.push("/supplier");
+  };
+
   return (
     <S.Footer>
       <S.Copyright>SPACEX &copy; 2025</S.Copyright>
@@ -13,7 +22,7 @@ export default function Footer() {
           PRICAVY POLICY
         </S.PrivacyPolicy>
 
-        <S.Suppliers>SUPPLIERS</S.Suppliers>
+        <S.Suppliers onClick={handleClick}>SUPPLIERS</S.Suppliers>
       </div>
     </S.Footer>
   );
