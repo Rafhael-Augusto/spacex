@@ -15,11 +15,12 @@ export default function Footer() {
       <S.Copyright>SPACEX &copy; 2025</S.Copyright>
 
       <div>
+        <S.CopyrightDesktop>SPACEX &copy; 2025</S.CopyrightDesktop>
         <S.PrivacyPolicy
           target="_blank"
           href="https://www.spacex.com/media/privacy_policy_spacex.pdf"
         >
-          PRICAVY POLICY
+          PRIVACY POLICY
         </S.PrivacyPolicy>
 
         <S.Suppliers onClick={handleClick}>SUPPLIERS</S.Suppliers>

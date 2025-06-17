@@ -17,14 +17,17 @@ export default function Supplier() {
             local suppliers that enable us to achieve our goals.
           </S.SupplierText>
         </div>
-        <div>
-          <S.SubTitle>Interested in doing business with us?</S.SubTitle>
-          <S.Button>BECOME A SUPPLIER</S.Button>
-        </div>
-        <div>
-          <S.SubTitle>Already a supplier?</S.SubTitle>
-          <S.Button>SIGN IN</S.Button>
-        </div>
+
+        <S.ButtonsDiv>
+          <div>
+            <S.SubTitle>Interested in doing business with us?</S.SubTitle>
+            <S.Button>BECOME A SUPPLIER</S.Button>
+          </div>
+          <div>
+            <S.SubTitle>Already a supplier?</S.SubTitle>
+            <S.Button>SIGN IN</S.Button>
+          </div>
+        </S.ButtonsDiv>
       </S.Wrapper>
     </S.Container>
   );

@@ -5,6 +5,8 @@ import styled from "styled-components";
 type Props = {
   imageurl?: string;
   height?: string;
+
+  heightdesktop?: string;
 };
 
 export const Container = styled.div`
@@ -27,7 +29,7 @@ export const Section = styled.section.withConfig({
   background-position: center;
 
   background-color: rgba(0, 0, 0, 1);
-  transition: all 1s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
 `;
 
 export const VideoSection = styled.video`
@@ -40,7 +42,9 @@ export const VideoSection = styled.video`
   background-color: #000000;
 `;
 
-export const PrimaryText = styled.span<Props>`
+export const PrimaryText = styled.span.withConfig({
+  shouldForwardProp: (prop) => prop !== "height, heightdesktop",
+})<Props>`
   position: absolute;
 
   font-size: 8.5vw;
@@ -50,9 +54,41 @@ export const PrimaryText = styled.span<Props>`
 
   bottom: ${(Props) => (Props.height ? Props.height : 18)}vw;
   left: 5%;
+
+  @media (min-width: 500px) {
+    width: 100%;
+    height: 7vh;
+
+    bottom: 17%;
+    left: 5%;
+
+    font-size: 220%;
+  }
+
+  @media (min-width: 600px) {
+    height: 15vh;
+    width: 287px;
+
+    font-size: 350%;
+
+    bottom: ${(Props) => (Props.heightdesktop ? Props.heightdesktop : 30)}vh;
+    left: 8%;
+  }
+
+  @media (min-width: 960px) {
+    bottom: 18%;
+    left: 8%;
+
+    width: 100%;
+    font-size: 200%;
+
+    width: 380px;
+  }
 `;
 
-export const SecondaryText = styled(PrimaryText)<Props>`
+export const SecondaryText = styled(PrimaryText).withConfig({
+  shouldForwardProp: (prop) => prop !== "height, heightdesktop",
+})<Props>`
   position: absolute;
 
   font-size: 2.1vh;
@@ -60,4 +96,16 @@ export const SecondaryText = styled(PrimaryText)<Props>`
   font-family: "D-DIN-LIGHT", Arial, Helvetica, sans-serif;
 
   bottom: ${(Props) => (Props.height ? Props.height : 24)}vw;
+
+  @media (min-width: 500px) {
+    bottom: 20%;
+  }
+
+  @media (min-width: 600px) {
+    bottom: ${(Props) => Props.heightdesktop}vh;
+  }
+
+  @media (min-width: 960px) {
+    bottom: 20%;
+  }
 `;

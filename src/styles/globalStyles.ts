@@ -1,6 +1,7 @@
 "use client";
 
 import styled, { createGlobalStyle } from "styled-components";
+import { motion } from "framer-motion";
 
 export const GlobalStyles = createGlobalStyle`
     *{
@@ -34,8 +35,9 @@ export const GlobalStyles = createGlobalStyle`
     }
 `;
 
-export const PrimaryButton = styled.button`
+export const PrimaryButton = styled(motion.button)`
   position: absolute;
+  overflow: hidden; /* ← importante para esconder a camada animada */
 
   display: flex;
   align-items: center;
@@ -53,4 +55,28 @@ export const PrimaryButton = styled.button`
 
   bottom: 11.5%;
   left: 5%;
+
+  & > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+
+    height: 100%;
+    width: 100%;
+  }
+
+  @media (min-width: 500px) {
+    width: 170px;
+    height: 56px;
+
+    bottom: 60px;
+    left: 5%;
+  }
+
+  @media (min-width: 600px) {
+    bottom: 16%;
+    left: 8%;
+  }
 `;
