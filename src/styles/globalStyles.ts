@@ -1,7 +1,6 @@
 "use client";
 
 import styled, { createGlobalStyle } from "styled-components";
-import { motion } from "framer-motion";
 
 export const GlobalStyles = createGlobalStyle`
     *{
@@ -35,7 +34,7 @@ export const GlobalStyles = createGlobalStyle`
     }
 `;
 
-export const PrimaryButton = styled(motion.button)`
+export const PrimaryButton = styled.div`
   position: absolute;
   overflow: hidden; /* ← importante para esconder a camada animada */
 
@@ -65,6 +64,18 @@ export const PrimaryButton = styled(motion.button)`
 
     height: 100%;
     width: 100%;
+
+    & > span {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
   }
 
   @media (min-width: 500px) {

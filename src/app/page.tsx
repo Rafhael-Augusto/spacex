@@ -28,7 +28,7 @@ export default function Home() {
             href="https://www.spacex.com/launches/mission/?missionId=ax-4"
             aria-label="Go to the spaceX website to learn more about an upcoming launch"
           >
-            LEARN MORE
+            LEARN MORE <span>about spaceX&quot;s in their website</span>
           </a>
         </PrimaryButton>
       </S.Section>
@@ -46,6 +46,7 @@ export default function Home() {
             aria-label="Go to the spaceX website to know more about the plans to go to mars"
           >
             LEARN MORE
+            <span>about spaceX&quot;s in their website</span>
           </a>
         </PrimaryButton>
       </S.Section>
@@ -65,7 +66,8 @@ export default function Home() {
             href="https://www.spacex.com/launches/mission/?missionId=starship-flight-9"
             aria-label="Go to the spaceX website to watch a launch"
           >
-            REWATCH
+            REWATCH{" "}
+            <span>the video of the launch on spaceX&quot;s website</span>
           </a>
         </PrimaryButton>
       </S.Section>
@@ -85,7 +87,8 @@ export default function Home() {
             href="https://www.spacex.com/launches/mission/?missionId=sl-15-9"
             aria-label="Go to the spaceX website to watch an upcoming launch"
           >
-            REWATCH
+            REWATCH{" "}
+            <span>the video of the launch on spaceX&quot;s website</span>
           </a>
         </PrimaryButton>
       </S.Section>
@@ -105,7 +108,8 @@ export default function Home() {
             href="https://www.spacex.com/launches/mission/?missionId=sl-15-9"
             aria-label="Go to the spaceX website to watch a recent launch"
           >
-            REWATCH
+            REWATCH{" "}
+            <span>the video of the launch on spaceX&quot;s website</span>
           </a>
         </PrimaryButton>
       </S.Section>
@@ -129,6 +133,7 @@ export default function Home() {
             aria-label="Go to the spaceX website to watch a recent launch"
           >
             STARLINK MISSION
+            <span>click to watch the video on spaceX&quot;s website</span>
           </a>
         </PrimaryButton>
       </S.Section>
@@ -145,7 +150,7 @@ export default function Home() {
             href="https://www.spacex.com/updates/#eva-suit"
             aria-label="Go to the spaceX website to learn more about the eva-suit"
           >
-            LEARN MORE
+            LEARN MORE <span>about spaceX&quot;s suit in their website</span>
           </a>
         </PrimaryButton>
       </S.Section>

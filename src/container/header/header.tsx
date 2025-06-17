@@ -9,7 +9,7 @@ export default function Header() {
   const lastScrollPos = useRef(0);
 
   const [state, setState] = useState({
-    setLogoVisible: false,
+    setLogoVisible: true,
     setBackgroundVisible: false,
   });
 
