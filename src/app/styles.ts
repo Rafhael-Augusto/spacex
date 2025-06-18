@@ -1,6 +1,7 @@
 "use client";
 
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 type Props = {
   imageurl?: string;
@@ -42,7 +43,7 @@ export const VideoSection = styled.video`
   background-color: #000000;
 `;
 
-export const PrimaryText = styled.span.withConfig({
+export const PrimaryText = styled(motion.span).withConfig({
   shouldForwardProp: (prop) => prop !== "height, heightdesktop",
 })<Props>`
   position: absolute;

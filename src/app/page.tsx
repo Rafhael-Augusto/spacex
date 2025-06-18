@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 
 import { PrimaryButton } from "@/styles/globalStyles";
+
 import * as S from "./styles";
 
 export default function Home() {
@@ -18,7 +19,7 @@ export default function Home() {
     <S.Container>
       <S.Section
         style={{ opacity: state.isPageLoaded ? "1" : "0" }}
-        imageurl="./images/backgrounds/FirstPic.jpg"
+        imageurl="./images/backgrounds/FirstPic.webp"
       >
         <S.SecondaryText heightdesktop={"28"}>UPCOMING LAUNCH</S.SecondaryText>
         <S.PrimaryText heightdesktop={"26"}>AX-4 MISSION</S.PrimaryText>
@@ -34,7 +35,7 @@ export default function Home() {
       </S.Section>
       <S.Section
         style={{ opacity: state.isPageLoaded ? "1" : "0" }}
-        imageurl="./images/backgrounds/SecondPic.jpg"
+        imageurl="./images/backgrounds/SecondPic.webp"
       >
         <S.PrimaryText heightdesktop={"34"} height="28">
           THE ROAD TO MAKING LIFE MULTIPLANETARY
@@ -52,7 +53,7 @@ export default function Home() {
       </S.Section>
       <S.Section
         style={{ opacity: state.isPageLoaded ? "1" : "0" }}
-        imageurl="./images/backgrounds/ThirdPic.jpg"
+        imageurl="./images/backgrounds/ThirdPic.webp"
       >
         <S.SecondaryText heightdesktop={"35"} height="33">
           RECENT LAUNCH
@@ -73,7 +74,7 @@ export default function Home() {
       </S.Section>
       <S.Section
         style={{ opacity: state.isPageLoaded ? "1" : "0" }}
-        imageurl="./images/backgrounds/FourthPic.jpg"
+        imageurl="./images/backgrounds/FourthPic.webp"
       >
         <S.SecondaryText heightdesktop={"28"} height="24">
           UPCOMING LAUNCH
@@ -94,7 +95,7 @@ export default function Home() {
       </S.Section>
       <S.Section
         style={{ opacity: state.isPageLoaded ? "1" : "0" }}
-        imageurl="./images/backgrounds/SeventhPic.jpg"
+        imageurl="./images/backgrounds/SeventhPic.webp"
       >
         <S.SecondaryText heightdesktop={"28"} height="24">
           RECENT LAUNCH
@@ -139,7 +140,7 @@ export default function Home() {
       </S.Section>
       <S.Section
         style={{ opacity: state.isPageLoaded ? "1" : "0" }}
-        imageurl="./images/backgrounds/SixthPic.jpg"
+        imageurl="./images/backgrounds/SixthPic.webp"
       >
         <S.PrimaryText heightdesktop={"34"} height="28">
           ADVANCING HUMAN SPACEFLIGHT

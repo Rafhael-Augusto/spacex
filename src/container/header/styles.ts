@@ -1,8 +1,17 @@
 "use client";
 
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+import * as Anims from "@/styles/animations";
 
-export const Header = styled.header`
+import { Turn as Hamburger } from "hamburger-react";
+
+type Props = {
+  isvisible: boolean;
+};
+
+export const Header = styled.header.withConfig({
+  shouldForwardProp: (prop) => prop !== "isvisible",
+})<Props>`
   position: fixed;
   top: 0;
   left: 0;
@@ -15,13 +24,35 @@ export const Header = styled.header`
 
   width: 100vw;
   height: 9vh;
-  background-color: transparent;
 
-  transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+
+  &::before {
+    position: absolute;
+
+    content: "";
+    height: 100%;
+    width: 100%;
+
+    z-index: -1;
+    background-color: #000000;
+
+    transform-origin: top;
+    animation: ${(Props) =>
+        Props.isvisible
+          ? css`
+              ${Anims.HeaderFadeIn}
+            `
+          : css`
+              ${Anims.HeaderFadeOut}
+            `}
+      0.3s ease-in-out forwards;
+  }
 
   @media (min-width: 960px) {
     opacity: 1;
 
+    width: 100vw;
     height: 14vh;
   }
 `;
@@ -35,85 +66,78 @@ export const Logo = styled.img`
   margin-left: 4%;
   margin-bottom: 2%;
 
+  z-index: 2;
+
   object-fit: cover;
 
   @media (min-width: 500px) {
     height: 20px;
     width: 160px;
+    margin-left: 30%;
   }
 
   @media (min-width: 960px) {
     margin-top: 10px;
+    margin-left: 4%;
   }
 
   cursor: pointer;
 `;
 
-export const MenuButton = styled.span`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  position: absolute;
-  border: none;
-
-  height: 100%;
-  width: 10%;
-
-  gap: 0.5vw;
-
-  top: 0.2vh;
-  right: 0;
-
+export const MenuButton = styled(Hamburger)`
   background-color: transparent;
-
-  @media (max-width: 959px) {
-    top: -2px;
-  }
-
-  @media (min-width: 500px) {
-    width: 56px;
-
-    gap: 2px;
-  }
-
-  @media (min-width: 960px) {
-    right: 4vw;
-    top: 4.9vh;
-
-    height: 30%;
-    width: 1.5%;
-  }
-
   cursor: pointer;
-`;
-
-export const HamburgerPiece = styled.span`
-  display: block;
-
-  height: 1%;
-  width: 30%;
-
-  background-color: transparent;
-  border: 1.5px solid #fff;
-
-  @media (min-width: 960px) {
-    width: 100%;
-  }
 `;
 
 export const Link = styled.a`
   display: none;
+  position: relative;
+
   text-decoration: none;
 
-  @media (min-width: 960px) {
-    display: block;
+  &::before {
+    position: absolute;
+    content: "";
 
-    font-size: 1.1vw;
+    bottom: -30%;
+
+    height: 100%;
+    width: 100%;
+
+    border-bottom: 2px solid #fff;
+
+    transform: scaleX(0);
+    transform-origin: right;
+
+    z-index: 1;
+
+    animation: ${Anims.BorderBottomOut} 0.2s ease-in-out forwards;
+  }
+
+  &:hover::before {
+    animation: ${Anims.BorderBottomIn} 0.2s ease-in-out forwards;
+  }
+
+  @media (min-width: 960px) {
+    display: inline;
+    font-size: 0.95vw;
   }
 
   cursor: pointer;
+`;
+
+export const ShopNMenu = styled.div.withConfig({
+  shouldForwardProp: (prop) => prop !== "isvisible",
+})<Props>`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 2vh;
+
+  margin-right: 6vh;
+  transition: opacity ${(Props) => (Props.isvisible ? "0.8" : "0.2")}s
+    ease-in-out;
 `;
 
 export const ShopButton = styled(Link)`
@@ -126,7 +150,6 @@ export const ShopButton = styled(Link)`
     justify-content: center;
 
     font-size: 1.1vw;
-    margin-right: 7.5vw;
     margin-bottom: 0.3vw;
     margin-top: 3%;
   }
@@ -140,26 +163,82 @@ export const LinkList = styled.div`
   @media (min-width: 960px) {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
 
-    margin-left: 2vw;
+    width: 100%;
+    margin-left: 3.5vw;
     gap: 2.2vw;
   }
 `;
 
-export const Container = styled.div`
+export const Container = styled.div.withConfig({
+  shouldForwardProp: (prop) => prop !== "isvisible",
+})<Props>`
   display: flex;
   align-items: center;
   justify-content: center;
 
   width: 100%;
+  transition: opacity ${(Props) => (Props.isvisible ? "0.8" : "0.2")}s
+    ease-in-out;
 
   @media (min-width: 960px) {
     display: flex;
     align-items: center;
     justify-content: left;
 
+    width: 100%;
+
     gap: 1vw;
     margin-left: 1.5vw;
   }
+`;
+
+export const Menu = styled.div.withConfig({
+  shouldForwardProp: (prop) => prop !== "isvisible",
+})<Props>`
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  z-index: ${(Props) => (Props.isvisible ? 1 : -1)};
+  width: 400px;
+  height: 100vh;
+
+  ::before {
+    position: absolute;
+    content: "";
+    background-color: #000000;
+
+    height: 100%;
+    width: 100%;
+
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: right;
+
+    animation: ${(Props) =>
+        Props.isvisible
+          ? css`
+              ${Anims.MenuFadeIn}
+            `
+          : css`
+              ${Anims.MenuFadeOut}
+            `}
+      0.5s ease-in-out forwards;
+  }
+
+  height: 100vh;
+  width: 300px;
+`;
+
+export const CloseUis = styled.div`
+  position: fixed;
+  display: none;
+
+  height: 100vh;
+  width: 100vw;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
 `;

@@ -1,6 +1,7 @@
 "use client";
 
-import styled, { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from "styled-components";
+import * as Anims from "./animations";
 
 export const GlobalStyles = createGlobalStyle`
     *{
@@ -32,11 +33,17 @@ export const GlobalStyles = createGlobalStyle`
     body {
         background-color: #000000;
     }
+
+    html {
+      scroll-behavior: smooth;
+    }
 `;
+
+import styled from "styled-components";
 
 export const PrimaryButton = styled.div`
   position: absolute;
-  overflow: hidden; /* ← importante para esconder a camada animada */
+  overflow: hidden;
 
   display: flex;
   align-items: center;
@@ -55,6 +62,28 @@ export const PrimaryButton = styled.div`
   bottom: 11.5%;
   left: 5%;
 
+  transition: all 0.2s ease-in-out;
+  z-index: 1;
+
+  &::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+
+    background-color: #fff;
+    transform: scaleY(0);
+    transform-origin: top;
+
+    z-index: -1;
+
+    animation: ${Anims.FadeOut} 0.2s ease-in-out forwards;
+  }
+
+  &:hover::before {
+    animation: ${Anims.FadeIn} 0.2s ease-in-out forwards;
+  }
+
   & > a {
     display: flex;
     align-items: center;
@@ -64,6 +93,15 @@ export const PrimaryButton = styled.div`
 
     height: 100%;
     width: 100%;
+
+    background-color: transparent;
+    color: #fff;
+
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      color: #000000;
+    }
 
     & > span {
       position: absolute;
@@ -77,7 +115,6 @@ export const PrimaryButton = styled.div`
       border: 0;
     }
   }
-
   @media (min-width: 500px) {
     width: 170px;
     height: 56px;

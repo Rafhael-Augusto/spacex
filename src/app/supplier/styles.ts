@@ -86,16 +86,22 @@ export const SupplierText = styled.div`
 
 export const Button = styled(PrimaryButton)`
   position: relative;
-  display: block;
-
-  bottom: 0%;
-  left: 0;
+  display: flex;
 
   width: 100%;
+
+  top: 0;
+  left: 0;
+
+  &:hover {
+    color: #000000;
+  }
 
   @media (min-width: 600px) {
     width: 290px;
   }
+
+  cursor: pointer;
 `;
 
 export const ButtonsDiv = styled.div`
