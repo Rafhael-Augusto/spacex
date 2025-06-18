@@ -22,6 +22,8 @@ export const Header = styled.header.withConfig({
   align-items: center;
   justify-content: center;
 
+  font-family: "D-DIN";
+
   width: 100vw;
   height: 9vh;
 
@@ -149,8 +151,7 @@ export const ShopButton = styled(Link)`
     align-items: center;
     justify-content: center;
 
-    font-size: 1.1vw;
-    margin-bottom: 0.3vw;
+    font-size: 0.95vw;
     margin-top: 3%;
   }
 
