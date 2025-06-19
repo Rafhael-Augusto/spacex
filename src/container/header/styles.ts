@@ -111,7 +111,6 @@ export const Link = styled.a`
 
     height: 100%;
     width: 100%;
-
     border-bottom: 1px solid #fff;
 
     transform: scaleX(0);
@@ -309,16 +308,18 @@ export const MenuLinkList = styled.div.withConfig({
       padding-bottom: 3%;
       border-bottom: 1px solid rgba(85, 83, 83, 0.5);
       margin-right: 43px;
-
       opacity: 0;
-      display: ${(Props) => (Props.isvisible ? "block" : "none")};
+
+      pointer-events: ${(Props) => (Props.isvisible ? "auto" : "none")};
 
       animation: ${(Props) =>
         Props.isvisible
           ? css`
               ${Anims.ItemMenuFadeIn} 0.5s ease-in-out forwards
             `
-          : "none"};
+          : css`
+              ${Anims.ItemMenuFadeOut} 0.2s ease-in-out forwards
+            `};
 
       &:hover {
         & > * {
@@ -327,43 +328,43 @@ export const MenuLinkList = styled.div.withConfig({
       }
 
       &:nth-child(1) {
-        animation-delay: 0.1s;
+        animation-delay: ${(Props) => (Props.isvisible ? 0.1 : 0)}s;
       }
       &:nth-child(2) {
-        animation-delay: 0.15s;
+        animation-delay: ${(Props) => (Props.isvisible ? 0.15 : 0)}s;
       }
       &:nth-child(3) {
-        animation-delay: 0.2s;
+        animation-delay: ${(Props) => (Props.isvisible ? 0.2 : 0)}s;
       }
       &:nth-child(4) {
-        animation-delay: 0.25s;
+        animation-delay: ${(Props) => (Props.isvisible ? 0.25 : 0)}s;
       }
       &:nth-child(5) {
-        animation-delay: 0.3s;
+        animation-delay: ${(Props) => (Props.isvisible ? 0.3 : 0)}s;
       }
       &:nth-child(6) {
-        animation-delay: 0.35s;
+        animation-delay: ${(Props) => (Props.isvisible ? 0.35 : 0)}s;
       }
       &:nth-child(7) {
-        animation-delay: 0.4s;
+        animation-delay: ${(Props) => (Props.isvisible ? 0.4 : 0)}s;
       }
       &:nth-child(8) {
-        animation-delay: 0.45s;
+        animation-delay: ${(Props) => (Props.isvisible ? 0.45 : 0)}s;
       }
       &:nth-child(9) {
-        animation-delay: 0.5s;
+        animation-delay: ${(Props) => (Props.isvisible ? 0.5 : 0)}s;
       }
       &:nth-child(10) {
-        animation-delay: 0.55s;
+        animation-delay: ${(Props) => (Props.isvisible ? 0.55 : 0)}s;
       }
       &:nth-child(11) {
-        animation-delay: 0.6s;
+        animation-delay: ${(Props) => (Props.isvisible ? 0.6 : 0)}s;
       }
       &:nth-child(12) {
-        animation-delay: 0.65s;
+        animation-delay: ${(Props) => (Props.isvisible ? 0.65 : 0)}s;
       }
       &:nth-child(13) {
-        animation-delay: 0.7s;
+        animation-delay: ${(Props) => (Props.isvisible ? 0.7 : 0)}s;
       }
 
       cursor: pointer;

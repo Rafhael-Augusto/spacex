@@ -26,6 +26,7 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
+      console.log("a");
       if (lastScrollPos.current < window.scrollY) {
         setState((prev) => ({ ...prev, setLogoVisible: false }));
         setState((prev) => ({ ...prev, isMenuOpen: false }));
@@ -52,7 +53,7 @@ export default function Header() {
   return (
     <>
       <S.CloseUis
-        isvisible={state.isMenuOpen}
+        isvisible={state.isMenuOpen && window.scrollY === lastScrollPos.current}
         onClick={() => setState((prev) => ({ ...prev, isMenuOpen: false }))}
       />
       <S.Header
@@ -163,9 +164,23 @@ export default function Header() {
         </S.ShopNMenu>
 
         <S.Menu
-          isvisible={state.setLogoVisible && state.isMenuOpen ? true : false}
+          isvisible={
+            state.setLogoVisible &&
+            state.isMenuOpen &&
+            window.scrollY === lastScrollPos.current
+              ? true
+              : false
+          }
         >
-          <S.MenuLinkList isvisible={state.isMenuOpen}>
+          <S.MenuLinkList
+            isvisible={
+              state.setLogoVisible &&
+              state.isMenuOpen &&
+              window.scrollY === lastScrollPos.current
+                ? true
+                : false
+            }
+          >
             <div>
               <div>
                 <S.MenuLink

@@ -15,12 +15,13 @@ export const FadeIn = keyframes`
 `;
 
 export const FadeOut = keyframes`
-    from {
+  from {
     transform: scaleY(1);
   }
 
  to {
     transform: scaleY(0);
+
  }
 `;
 
@@ -106,6 +107,17 @@ export const ItemMenuFadeIn = keyframes`
     opacity: 1;
     transform: translateY(0);
   }
+`;
+
+export const ItemMenuFadeOut = keyframes`
+  from {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateX(50%);
+    }
 `;
 
 //-----------------------------------------//

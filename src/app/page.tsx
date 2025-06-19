@@ -1,12 +1,24 @@
-import { ReactLenis } from "lenis/react";
-import { PrimaryButton } from "@/styles/GlobalStyles";
+"use client";
 
+import { useEffect, useState } from "react";
+import { ReactLenis } from "lenis/react";
+
+import { PrimaryButton } from "@/styles/GlobalStyles";
 import * as S from "./styles";
 
 export default function Home() {
+  const [state, setState] = useState({
+    isPageLoaded: false,
+  });
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    setState((prev) => ({ ...prev, isPageLoaded: true }));
+  }, []);
+
   return (
     <>
-      <ReactLenis root options={{ duration: 0.8 }} />
+      <ReactLenis root options={{ duration: 0.6 }} />
       <S.Container>
         <S.Section imageurl="./images/backgrounds/FirstPic.webp">
           <div>
@@ -14,7 +26,10 @@ export default function Home() {
               <S.SecondaryText>UPCOMING LAUNCH</S.SecondaryText>
               <S.PrimaryText>AX-4 MISSION</S.PrimaryText>
             </div>
-            <PrimaryButton aria-label="Go to the spaceX website to learn more about an upcoming launch">
+            <PrimaryButton
+              pageloaded={state.isPageLoaded}
+              aria-label="Go to the spaceX website to learn more about an upcoming launch"
+            >
               <a
                 target="_blank"
                 href="https://www.spacex.com/launches/mission/?missionId=ax-4"

@@ -56,12 +56,10 @@ export const PrimaryButton = styled.div`
     width: 100%;
 
     background-color: #fff;
-    transform: scaleY(1);
     transform-origin: top;
 
-    animation: ${Anims.FadeOut} 0.2s ease-in-out forwards;
-
     z-index: -1;
+    animation: ${Anims.FadeOut} 0.2s ease-in-out forwards;
   }
 
   &:hover::before {
