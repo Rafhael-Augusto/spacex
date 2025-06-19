@@ -4,7 +4,10 @@
 ```
 git clone git@github.com:Rafhael-Augusto/spacex.git
 ```
-- Entre na pasta do projeto (spacex),
+- Entre na pasta do projeto (spacex)
+```
+cd spacex
+```
 - Dentro da pasta, no terminal, faca o build
 ```
 docker build -t spacex .
@@ -22,7 +25,10 @@ docker run -p 3000:3000 spacex
 ```
 git clone git@github.com:Rafhael-Augusto/spacex.git
 ```
-- Entre na pasta do projeto (spacex),
+- Entre na pasta do projeto (spacex)
+```
+cd spacex
+```
 - Dentro da pasta, no terminal, escreva
 ```
 npm install
