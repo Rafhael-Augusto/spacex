@@ -1,7 +1,7 @@
 "use client";
 
 import { createGlobalStyle } from "styled-components";
-import * as Anims from "./animations";
+import * as Anims from "./Animations";
 
 export const GlobalStyles = createGlobalStyle`
     *{

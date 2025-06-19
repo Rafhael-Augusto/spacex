@@ -1,7 +1,7 @@
 "use client";
 
 import styled from "styled-components";
-import { PrimaryButton } from "@/styles/globalStyles";
+import { PrimaryButton } from "@/styles/GlobalStyles";
 
 export const Container = styled.div`
   width: 98vw;

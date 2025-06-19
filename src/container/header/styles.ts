@@ -1,7 +1,7 @@
 "use client";
 
 import styled, { css } from "styled-components";
-import * as Anims from "@/styles/animations";
+import * as Anims from "@/styles/Animations";
 
 import { Turn as Hamburger } from "hamburger-react";
 
