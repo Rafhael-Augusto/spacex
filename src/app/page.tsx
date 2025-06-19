@@ -6,7 +6,7 @@ import * as S from "./styles";
 export default function Home() {
   return (
     <>
-      <ReactLenis root />
+      <ReactLenis root options={{ duration: 0.8 }} />
       <S.Container>
         <S.Section imageurl="./images/backgrounds/FirstPic.webp">
           <div>
