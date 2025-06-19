@@ -41,3 +41,7 @@ npm start
 ```
 - Entre no localhost:3000 no navegador.
 - http://localhost:3000/
+
+### Link do projeto na vercel
+
+Vercel: https://spacex-psi-one.vercel.app/
