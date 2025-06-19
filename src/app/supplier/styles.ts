@@ -11,6 +11,10 @@ export const Container = styled.div`
 
   overflow: hidden;
 
+  & > * {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
   @media (min-width: 600px) {
     height: 100vh;
   }

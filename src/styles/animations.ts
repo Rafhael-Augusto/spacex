@@ -96,3 +96,38 @@ export const BorderBottomOut = keyframes`
 `;
 
 //-----------------------------------------//
+
+export const ItemMenuFadeIn = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+
+//-----------------------------------------//
+
+export const ScreenFade = keyframes`
+  from {
+    opacity: 0;
+    z-index: -1
+  }
+  to {
+    opacity: 1;
+    z-index: 4;
+  }
+`;
+
+export const RemoveScreenFade = keyframes`
+  from {
+    opacity: 1;
+    z-index: 4;
+  }
+  to {
+    opacity: 0;
+    z-index: -1;
+  }
+`;

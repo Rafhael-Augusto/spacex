@@ -3,17 +3,9 @@
 import styled, { css } from "styled-components";
 
 const sharedStyles = css`
-  font-size: 3vw;
-  font-family: "D-DIN-LIGHT", Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: lighter;
-
-  @media (min-width: 600px) {
-    font-size: 2vh;
-  }
-
-  @media (min-width: 960px) {
-    font-size: 1.5vh;
-  }
 `;
 
 export const Footer = styled.footer`
@@ -63,6 +55,11 @@ export const PrivacyPolicy = styled.a`
   text-decoration: none;
   font-weight: bolder;
 
+  transition: color 0.3s ease-in-out;
+  &:hover {
+    color: gray;
+  }
+
   cursor: pointer;
 `;
 
@@ -72,6 +69,11 @@ export const Suppliers = styled.button`
   font-weight: bolder;
   background-color: transparent;
   border: none;
+
+  transition: color 0.3s ease-in-out;
+  &:hover {
+    color: gray;
+  }
 
   cursor: pointer;
 `;

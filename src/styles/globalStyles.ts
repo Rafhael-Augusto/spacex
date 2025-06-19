@@ -4,7 +4,6 @@ import { createGlobalStyle } from "styled-components";
 import * as Anims from "./animations";
 
 export const GlobalStyles = createGlobalStyle`
-    
     *{
         margin: 0;
         padding: 0;
@@ -30,7 +29,7 @@ export const GlobalStyles = createGlobalStyle`
 import styled from "styled-components";
 
 export const PrimaryButton = styled.div`
-  position: absolute;
+  position: relative;
   overflow: hidden;
 
   display: flex;
@@ -47,9 +46,6 @@ export const PrimaryButton = styled.div`
   height: 14vw;
   width: 44vw;
 
-  bottom: 11.5%;
-  left: 5%;
-
   transition: all 0.2s ease-in-out;
   z-index: 1;
 
@@ -60,12 +56,12 @@ export const PrimaryButton = styled.div`
     width: 100%;
 
     background-color: #fff;
-    transform: scaleY(0);
+    transform: scaleY(1);
     transform-origin: top;
 
-    z-index: -1;
-
     animation: ${Anims.FadeOut} 0.2s ease-in-out forwards;
+
+    z-index: -1;
   }
 
   &:hover::before {
@@ -81,8 +77,6 @@ export const PrimaryButton = styled.div`
 
     height: 100%;
     width: 100%;
-
-    background-color: transparent;
     color: #fff;
 
     transition: all 0.2s ease-in-out;
@@ -106,13 +100,5 @@ export const PrimaryButton = styled.div`
   @media (min-width: 500px) {
     width: 170px;
     height: 56px;
-
-    bottom: 60px;
-    left: 5%;
-  }
-
-  @media (min-width: 600px) {
-    bottom: 16%;
-    left: 8%;
   }
 `;
