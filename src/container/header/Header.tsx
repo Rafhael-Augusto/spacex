@@ -171,6 +171,10 @@ export default function Header() {
               ? true
               : false
           }
+          style={{
+            pointerEvents:
+              state.setLogoVisible && state.isMenuOpen ? "all" : "none",
+          }}
         >
           <S.MenuLinkList
             isvisible={
